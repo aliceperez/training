@@ -1,0 +1,88 @@
+<div class="container login" id="page-content-wrapper" style="margin: 0 auto; margin-top: 200px;">
+    <div class="container-fluid">
+    <form>
+      <div class="form-group col-md-4">
+        <label>FIND AN EMPLOYEE</label>
+        <input type="text" class="form-control col-md-4" placeholder="Name or Area">
+      </div>
+      <div class="form-group col-md-6">
+        <label>SELECT A SKILL CATEGORY</label>
+        <select id="disabledSelect"  class="form-control col-md-6">
+            <option>General process</option>
+            <option>Iphone 5s</option>
+            <option>Iphone 6</option>
+            <option>Iphone 6+</option>
+            <option>Battery</option>
+            <option>LCD</option>
+        </select>
+      </div>
+      <div class="form-group col-md-2">
+        <button type="submit" class="btn btn-default" style="padding: 10px;margin-top: 20px; width: 150px; background:#85c6f4; color: #fff; border: none; " >SEARCH</button>
+      </div>
+    </form>
+    <div ng-controller="EditableRowCtrl">
+  <table class="table table-bordered table-hover table-condensed">
+    <tr style="font-weight: bold">
+      <td style="width:28%">Name</td>
+      <td style="width:20%">Area</td>
+      <td style="width:20%">Process</td>
+      <td style="width:20%">Skills</td>
+      <td style="width:2%">Score</td>
+      <td style="width:5%">Actions</td>
+    </tr>
+    <tr ng-repeat="user in users">
+      <td>
+        <!-- editable username (text with validation) -->
+        <span editable-text="user.name" e-name="name" e-form="rowform" onbeforesave="checkName($data, user.id)" e-required>
+          {{ user.name || 'empty' }}
+        </span>
+      </td>
+      <td>
+        <!-- editable status (select-local) -->
+        <span editable-select="user.status" e-name="status" e-form="rowform" e-ng-options="s.value as s.text for s in statuses">
+          {{ showStatus(user) }}
+        </span>
+      </td>
+      <td>
+        <!-- editable group (select-remote) -->
+        <span editable-select="user.group" e-name="group" onshow="loadGroups()" e-form="rowform" e-ng-options="g.id as g.text for g in groups">
+          {{ showGroup(user) }}
+        </span>
+      </td>
+         <td>
+        <!-- editable group (select-remote) -->
+        <span editable-select="user.skill" e-name="skill" onshow="loadSkills()" e-form="rowform" e-ng-options="g.id as g.text for g in skills">
+          {{ showSkills(user) }}
+        </span>
+      </td>
+      <td>
+        <!-- editable username (text with validation) -->
+        <span editable-text="user.score" e-name="score" e-form="rowform" onbeforesave="checkName($data, user.score)" e-required>
+          {{ user.score || 'empty' }}
+        </span>
+      </td>
+      </td>
+      <td style="white-space: nowrap">
+        <!-- form -->
+        <form editable-form name="rowform" onbeforesave="saveUser($data, user.id)" ng-show="rowform.$visible" class="form-buttons form-inline" shown="inserted == user">
+          <button type="submit" ng-click="save($index, user)" ng-disabled="rowform.$waiting" class="btn btn-primary">
+            save
+          </button>
+          <button type="button" ng-disabled="rowform.$waiting" ng-click="rowform.$cancel()" class="btn btn-default">
+            cancel
+          </button>
+        </form>
+        <div class="buttons" ng-show="!rowform.$visible">
+          <button class="btn btn-primary" ng-click="rowform.$show()">edit</button>
+          <button class="btn btn-danger" ng-click="removeUser($index)">del</button>
+        </div>  
+      </td>
+    </tr>
+  </table>
+
+  <button class="btn btn-default" ng-click="addUser()">Add new employee</button>
+</div>
+</div> 
+<!-- style="border-radius: 25px; padding: 25px;" -->
+<!-- style="padding: 15px;margin-top: 45px; width: 150px; background:#85c6f4; color: #fff; border: none; " -->
+<!-- style="color:#ccc; font-size: 30px;" -->

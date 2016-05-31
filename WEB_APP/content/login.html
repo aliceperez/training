@@ -1,0 +1,50 @@
+<div class="container login" style="margin: 0 auto; margin-top: 200px;" ng-controller="UserController">
+ <form class="form-signin" id="demo-form"  name="userForm" novalidate>
+
+   <div class="main">
+  <div style="border-bottom: 1px solid #ccc; margin-bottom: 30px">
+   <h2>User login</h2> 
+  </div> 
+
+      <div class="col-md-12">
+        <div class="form-group">
+          <label for="">Username</label>
+          <input type="text" class="form-control" placeholder="ID or username" ng-model="user.name" ng-model-options="{ updateOn: 'blur' }" name="name" required="true" >
+        </div>
+        <span class="messages" ng-show="userForm.$submitted || userForm.name.$touched">
+          <span ng-show="userForm.name.$error.required">This field is required</span>
+        </span>
+      </div>
+
+      <div class="col-md-12">
+        <div class="form-group">
+          <label for="">Password</label>
+          <input type="password" class="form-control" placeholder="Password"  name="pass" >
+        </div>
+      </div>
+
+      <a href="#/home"><input type="submit" class="btn button" id="submit" ng-click="update()" ng-href="content/pages/home.html" value="Sign In" ng-disabled="userForm.$invalid" /></a>
+    </div>
+ </form>
+</div> 
+
+<style type="text/css">
+ 
+  .messages {
+    color: #FA787E;
+  }
+  
+  form.ng-submitted input.ng-invalid{
+    border-color: #FA787E;
+  }
+  
+  form input.ng-invalid.ng-touched {
+    border-color: #FA787E;
+  }
+  
+/*
+  form input.ng-valid.ng-touched {
+    border-color: #78FA89;
+  }
+*/  
+</style>

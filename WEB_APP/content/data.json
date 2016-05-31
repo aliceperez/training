@@ -1,0 +1,13 @@
+[
+
+{
+	id: 1, 
+	name: 'awesome user1', 
+	status: 2, 
+	group: 4, 
+	groupName: 'admin',
+	skill: 1, 
+	skillName: 'Iphone 5s LCD',
+	score: '100'
+	} 
+]

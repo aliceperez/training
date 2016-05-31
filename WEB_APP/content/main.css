@@ -1,0 +1,232 @@
+.body
+{
+	min-width: 1400px;
+	overflow-x: hidden;
+}
+.stepOne
+{
+	margin: 0 auto;
+	width:100%;
+	float: right;
+	margin-top: 65px;
+}
+.steptOne-Image
+{
+	width: 70%;
+	border: 5px solid black;
+}
+.stepOne-Title
+{
+	color: #999;
+	font-size:25px;
+	font-weight: 300;
+	margin-left: 200px;
+}
+.stepOne-Input
+{
+	float: right;
+
+}
+.center
+{
+	text-align: center;
+}
+.Title
+{
+	width: 100%; 
+	border-bottom: 1px solid #ccc;
+	padding-left:50px;
+	padding-bottom: 5px;
+}
+.code
+{
+	font-size: 16px;
+	padding: 20px;
+}
+.code:focus
+{
+	border: 1px solid #02ad30;
+}
+.right
+{
+	float: right;	
+}
+.next-Button
+{
+
+	color: #ccc;
+	font-size: 200px;
+	font-weight: 300;
+}
+.next-Button:hover
+{
+	text-decoration: none;
+}
+.vertical-centered-text {
+  height: 200px;
+  display: table;
+}
+  .vertical-centered-text > * {
+    display: table-cell;
+    vertical-align: middle;
+  }
+.cell-Box
+{
+	width: 33%;
+	text-align: center;
+}
+.button-Container
+{
+
+	background: #ccc;
+	border-radius: 5px;
+	width: 260px;
+	margin: 0 auto;
+	padding:10px; 
+	margin-top: 20px;
+	text-align: center;
+}
+/*.button--Container
+{
+
+	background: white;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	width: 200px;
+	margin: 0 auto;
+	padding:5px; 
+	padding-right:5px 
+	margin-top: 20px;
+	text-align: center;
+}*/
+/*.button-Box
+{
+   display: flex; 
+   margin-top: 70px;  
+   width: 1300px; 
+}*/
+.center
+{
+	text-align: center;
+}
+.centro
+{
+	width: 50%; 
+	margin: 0 auto
+}
+.btn-center
+{
+	display: flex;
+	width: 70%; 
+	margin: 0 auto	
+}
+.button-Back
+{ 
+   margin-right:50px; 
+}
+.button-Middle
+{ 
+    margin:0px 50px 0px 50px; 
+    text-align: center;
+}
+.refresh
+{
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    font-size: 40px;
+    background: #e6e6e6;
+    padding-top: 12px;
+    color: #02ad30;
+}
+.button-Next
+{ 
+    margin-left:50px 
+}
+
+.btn-Test
+{
+	width: 190px;
+	padding: 10px;
+	margin: 5px;
+	color:white;
+	border: none;
+	background: #adadad;
+	font-size: 26px;
+	margin-right: 5px;
+}
+
+.Test-Name
+{
+	color: #999;
+	font-weight: 300;
+	font-size: 18px;
+}
+
+.title-Test
+{
+	font-size: 80px;
+	font-weight: 700;
+	color: #999;
+}
+.subtitle-Test
+{
+	font-weight: 700;
+	color: #02ad30;
+}
+.desc-Title
+{
+	color: #999;
+	font-weight: 700;
+}
+.desc-Text
+{
+	font-weight: 700
+}
+
+.login
+{
+  margin-top: 200px; margin: 0 auto;
+}
+.form-signin {
+  max-width:400px ;  
+  margin: 0 auto;
+  margin-bottom: 20px;
+  display:block;
+  background-color: #fff;
+  -moz-box-shadow: 0 0 3px 3px #ccc;
+	-webkit-box-shadow: 0 0 3px 3px #ccc;
+	box-shadow: 0 0 3px 3px #ccc;
+  border-radius:2px;
+}
+.main{
+	padding: 20px 30px 80px 30px;
+  
+}
+.button
+{
+  background: #b8d766;
+  color: #fff;
+  width: 150px;
+  padding: 10px;
+  font-size: 14px;
+
+  margin-left: 175px;
+}
+.text-Little
+{
+  color: #888;
+  font-size: 14px;
+}
+.center
+{
+  text-align: center;
+}
+
+
+
+
+
+
+
+
